@@ -19,7 +19,6 @@ describe( 'Preview', () => {
 
 	async function openPreviewPage( editorPage ) {
 		let openTabs = await browser.pages();
-		const numberOfTabs = openTabs.length;
 		expect( openTabs ).toHaveLength( 2 );
 		await editorPage.click( '.editor-post-preview' );
 
@@ -53,6 +52,7 @@ describe( 'Preview', () => {
 
 	it( 'Should open a preview window for a new post', async () => {
 		const editorPage = page;
+		let previewPage;
 
 		// Disabled until content present.
 		const isPreviewDisabled = await editorPage.$$eval(
