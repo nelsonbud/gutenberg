@@ -53,7 +53,6 @@ describe( 'Preview', () => {
 
 	it( 'Should open a preview window for a new post', async () => {
 		const editorPage = page;
-		let previewPage;
 
 		// Disabled until content present.
 		const isPreviewDisabled = await editorPage.$$eval(
@@ -105,7 +104,7 @@ describe( 'Preview', () => {
 		] );
 		expectedPreviewURL = await editorPage.$eval( '.notice-success a', ( node ) => node.href );
 		// At this point, the preview page can lose its name, so we close it and open a fresh one
-		// so this test can complete.
+		// so this test can complete reliably.
 		await previewPage.close();
 		previewPage = await openPreviewPage( editorPage );
 		expect( previewPage.url() ).toBe( expectedPreviewURL );
