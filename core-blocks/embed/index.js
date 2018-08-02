@@ -60,10 +60,9 @@ function getEmbedBlockSettings( { title, description, icon, category = 'embed', 
 				type: 'string',
 			},
 			caption: {
-				type: 'array',
-				source: 'children',
+				type: 'object',
+				source: 'rich-text',
 				selector: 'figcaption',
-				default: [],
 			},
 			type: {
 				type: 'string',
@@ -288,7 +287,7 @@ function getEmbedBlockSettings( { title, description, icon, category = 'embed', 
 			return (
 				<figure className={ embedClassName }>
 					{ `\n${ url }\n` /* URL needs to be on its own line. */ }
-					{ caption && caption.length > 0 && <RichText.Content tagName="figcaption" value={ caption } /> }
+					{ ! RichText.isEmpty( caption ) && <RichText.Content tagName="figcaption" value={ caption } /> }
 				</figure>
 			);
 		},
