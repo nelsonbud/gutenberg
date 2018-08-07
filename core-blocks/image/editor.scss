@@ -4,7 +4,6 @@
 
 	img {
 		display: block;
-		width: 100%;
 	}
 
 	&.is-resized img {
@@ -122,6 +121,13 @@
 			display: table-caption;
 			caption-side: bottom;
 		}
+	}
+}
+
+[data-type="core/image"][data-align="wide"],
+[data-type="core/image"][data-align="full"] {
+	figure img {
+		width: 100%;
 	}
 }
 

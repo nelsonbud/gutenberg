@@ -6,16 +6,19 @@
 	}
 
 	&.aligncenter {
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
 		text-align: center;
+	}
+
+	&.alignfull img,
+	&.alignwide img {
+		width: 100%;
 	}
 
 	// Floats get an extra wrapping aside element, so the figure becomes a child.
 	// Resized images that are not floated, need the caption trick too.
 	.alignleft,
 	.alignright,
+	.aligncenter,
 	&.is-resized {
 		display: table;
 		margin: 0;

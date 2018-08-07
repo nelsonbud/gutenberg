@@ -225,7 +225,7 @@ export const settings = {
 			</Fragment>
 		);
 
-		if ( 'left' === align || 'right' === align ) {
+		if ( 'left' === align || 'right' === align || 'center' === align ) {
 			return (
 				<div>
 					<figure className={ classes }>
