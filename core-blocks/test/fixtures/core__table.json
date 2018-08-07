@@ -1,0 +1,477 @@
+[
+    {
+        "clientId": "_clientId_0",
+        "name": "core/table",
+        "isValid": true,
+        "attributes": {
+            "hasFixedLayout": false
+        },
+        "innerBlocks": [
+            {
+                "clientId": "_clientId_0",
+                "name": "core/table-row",
+                "isValid": true,
+                "attributes": {},
+                "innerBlocks": [
+                    {
+                        "clientId": "_clientId_0",
+                        "name": "core/table-cell",
+                        "isValid": true,
+                        "attributes": {
+                            "content": {
+                                "formats": [
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null
+                                ],
+                                "text": "Version"
+                            }
+                        },
+                        "innerBlocks": [],
+                        "originalContent": "<td>Version</td>"
+                    },
+                    {
+                        "clientId": "_clientId_1",
+                        "name": "core/table-cell",
+                        "isValid": true,
+                        "attributes": {
+                            "content": {
+                                "formats": [
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null
+                                ],
+                                "text": "Musician"
+                            }
+                        },
+                        "innerBlocks": [],
+                        "originalContent": "<td>Musician</td>"
+                    },
+                    {
+                        "clientId": "_clientId_2",
+                        "name": "core/table-cell",
+                        "isValid": true,
+                        "attributes": {
+                            "content": {
+                                "formats": [
+                                    null,
+                                    null,
+                                    null,
+                                    null
+                                ],
+                                "text": "Date"
+                            }
+                        },
+                        "innerBlocks": [],
+                        "originalContent": "<td>Date</td>"
+                    }
+                ],
+                "originalContent": "<tr>\n\t\t\t\n\n\t\t\t\n\n\t\t\t\n\t\t</tr>"
+            },
+            {
+                "clientId": "_clientId_1",
+                "name": "core/table-row",
+                "isValid": true,
+                "attributes": {},
+                "innerBlocks": [
+                    {
+                        "clientId": "_clientId_0",
+                        "name": "core/table-cell",
+                        "isValid": true,
+                        "attributes": {
+                            "content": {
+                                "formats": [
+                                    [
+                                        {
+                                            "type": "a",
+                                            "attributes": {
+                                                "href": "https://wordpress.org/news/2003/05/wordpress-now-available/"
+                                            }
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "type": "a",
+                                            "attributes": {
+                                                "href": "https://wordpress.org/news/2003/05/wordpress-now-available/"
+                                            }
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "type": "a",
+                                            "attributes": {
+                                                "href": "https://wordpress.org/news/2003/05/wordpress-now-available/"
+                                            }
+                                        }
+                                    ]
+                                ],
+                                "text": ".70"
+                            }
+                        },
+                        "innerBlocks": [],
+                        "originalContent": "<td><a href=\"https://wordpress.org/news/2003/05/wordpress-now-available/\">.70</a></td>"
+                    },
+                    {
+                        "clientId": "_clientId_1",
+                        "name": "core/table-cell",
+                        "isValid": true,
+                        "attributes": {
+                            "content": {
+                                "formats": [
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null
+                                ],
+                                "text": "No musician chosen."
+                            }
+                        },
+                        "innerBlocks": [],
+                        "originalContent": "<td>No musician chosen.</td>"
+                    },
+                    {
+                        "clientId": "_clientId_2",
+                        "name": "core/table-cell",
+                        "isValid": true,
+                        "attributes": {
+                            "content": {
+                                "formats": [
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null
+                                ],
+                                "text": "May 27, 2003"
+                            }
+                        },
+                        "innerBlocks": [],
+                        "originalContent": "<td>May 27, 2003</td>"
+                    }
+                ],
+                "originalContent": "<tr>\n\t\t\t\n\n\t\t\t\n\n\t\t\t\n\t\t</tr>"
+            },
+            {
+                "clientId": "_clientId_2",
+                "name": "core/table-row",
+                "isValid": true,
+                "attributes": {},
+                "innerBlocks": [
+                    {
+                        "clientId": "_clientId_0",
+                        "name": "core/table-cell",
+                        "isValid": true,
+                        "attributes": {
+                            "content": {
+                                "formats": [
+                                    [
+                                        {
+                                            "type": "a",
+                                            "attributes": {
+                                                "href": "https://wordpress.org/news/2004/01/wordpress-10/"
+                                            }
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "type": "a",
+                                            "attributes": {
+                                                "href": "https://wordpress.org/news/2004/01/wordpress-10/"
+                                            }
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "type": "a",
+                                            "attributes": {
+                                                "href": "https://wordpress.org/news/2004/01/wordpress-10/"
+                                            }
+                                        }
+                                    ]
+                                ],
+                                "text": "1.0"
+                            }
+                        },
+                        "innerBlocks": [],
+                        "originalContent": "<td><a href=\"https://wordpress.org/news/2004/01/wordpress-10/\">1.0</a></td>"
+                    },
+                    {
+                        "clientId": "_clientId_1",
+                        "name": "core/table-cell",
+                        "isValid": true,
+                        "attributes": {
+                            "content": {
+                                "formats": [
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null
+                                ],
+                                "text": "Miles Davis"
+                            }
+                        },
+                        "innerBlocks": [],
+                        "originalContent": "<td>Miles Davis</td>"
+                    },
+                    {
+                        "clientId": "_clientId_2",
+                        "name": "core/table-cell",
+                        "isValid": true,
+                        "attributes": {
+                            "content": {
+                                "formats": [
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null
+                                ],
+                                "text": "January 3, 2004"
+                            }
+                        },
+                        "innerBlocks": [],
+                        "originalContent": "<td>January 3, 2004</td>"
+                    }
+                ],
+                "originalContent": "<tr>\n\t\t\t\n\n\t\t\t\n\n\t\t\t\n\t\t</tr>"
+            },
+            {
+                "clientId": "_clientId_3",
+                "name": "core/table-row",
+                "isValid": true,
+                "attributes": {},
+                "innerBlocks": [
+                    {
+                        "clientId": "_clientId_0",
+                        "name": "core/table-cell",
+                        "isValid": true,
+                        "attributes": {
+                            "content": {
+                                "formats": [
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    [
+                                        {
+                                            "type": "a",
+                                            "attributes": {
+                                                "href": "https://codex.wordpress.org/WordPress_Versions"
+                                            }
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "type": "a",
+                                            "attributes": {
+                                                "href": "https://codex.wordpress.org/WordPress_Versions"
+                                            }
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "type": "a",
+                                            "attributes": {
+                                                "href": "https://codex.wordpress.org/WordPress_Versions"
+                                            }
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "type": "a",
+                                            "attributes": {
+                                                "href": "https://codex.wordpress.org/WordPress_Versions"
+                                            }
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "type": "a",
+                                            "attributes": {
+                                                "href": "https://codex.wordpress.org/WordPress_Versions"
+                                            }
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "type": "a",
+                                            "attributes": {
+                                                "href": "https://codex.wordpress.org/WordPress_Versions"
+                                            }
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "type": "a",
+                                            "attributes": {
+                                                "href": "https://codex.wordpress.org/WordPress_Versions"
+                                            }
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "type": "a",
+                                            "attributes": {
+                                                "href": "https://codex.wordpress.org/WordPress_Versions"
+                                            }
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "type": "a",
+                                            "attributes": {
+                                                "href": "https://codex.wordpress.org/WordPress_Versions"
+                                            }
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "type": "a",
+                                            "attributes": {
+                                                "href": "https://codex.wordpress.org/WordPress_Versions"
+                                            }
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "type": "a",
+                                            "attributes": {
+                                                "href": "https://codex.wordpress.org/WordPress_Versions"
+                                            }
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "type": "a",
+                                            "attributes": {
+                                                "href": "https://codex.wordpress.org/WordPress_Versions"
+                                            }
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "type": "a",
+                                            "attributes": {
+                                                "href": "https://codex.wordpress.org/WordPress_Versions"
+                                            }
+                                        }
+                                    ]
+                                ],
+                                "text": "Lots of versions skipped, see the full list"
+                            }
+                        },
+                        "innerBlocks": [],
+                        "originalContent": "<td>Lots of versions skipped, see <a href=\"https://codex.wordpress.org/WordPress_Versions\">the full list</a></td>"
+                    },
+                    {
+                        "clientId": "_clientId_1",
+                        "name": "core/table-cell",
+                        "isValid": true,
+                        "attributes": {
+                            "content": {
+                                "formats": [
+                                    null
+                                ],
+                                "text": "…"
+                            }
+                        },
+                        "innerBlocks": [],
+                        "originalContent": "<td>&hellip;</td>"
+                    },
+                    {
+                        "clientId": "_clientId_2",
+                        "name": "core/table-cell",
+                        "isValid": true,
+                        "attributes": {
+                            "content": {
+                                "formats": [
+                                    null
+                                ],
+                                "text": "…"
+                            }
+                        },
+                        "innerBlocks": [],
+                        "originalContent": "<td>&hellip;</td>"
+                    }
+                ],
+                "originalContent": "<tr>\n\t\t\t\n\n\t\t\t\n\n\t\t\t\n\t\t</tr>"
+            }
+        ],
+        "originalContent": "<table class=\"wp-block-table\">\n\t<tbody>\n\t\t\n\n\t\t\n\n\t\t\n\n\t\t\n\t</tbody>\n</table>"
+    }
+]

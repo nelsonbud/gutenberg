@@ -1,0 +1,31 @@
+[
+    {
+        "blockName": "core/table-row",
+        "attrs": null,
+        "innerBlocks": [
+            {
+                "blockName": "core/table-cell",
+                "attrs": null,
+                "innerBlocks": [],
+                "innerHTML": "\n\t<td>Version</td>\n\t"
+            },
+            {
+                "blockName": "core/table-cell",
+                "attrs": null,
+                "innerBlocks": [],
+                "innerHTML": "\n\t<td>Musician</td>\n\t"
+            },
+            {
+                "blockName": "core/table-cell",
+                "attrs": null,
+                "innerBlocks": [],
+                "innerHTML": "\n\t<td>Date</td>\n\t"
+            }
+        ],
+        "innerHTML": "\n<tr>\n\t\n\n\t\n\n\t\n</tr>\n"
+    },
+    {
+        "attrs": {},
+        "innerHTML": "\n"
+    }
+]

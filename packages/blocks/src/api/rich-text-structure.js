@@ -6,7 +6,19 @@ import { find } from 'lodash';
 
 const { TEXT_NODE, ELEMENT_NODE } = window.Node;
 
+function createElement( html ) {
+	const doc = document.implementation.createHTMLDocument( '' );
+
+	doc.body.innerHTML = html;
+
+	return doc.body;
+}
+
 export function createWithSelection( element, range, multiline, settings ) {
+	if ( typeof element === 'string' ) {
+		element = createElement( element );
+	}
+
 	if ( ! multiline ) {
 		return createRecord( element, range, settings );
 	}
@@ -67,6 +79,8 @@ function createRecord( element, range, settings = {} ) {
 		filterString = ( string ) => string,
 	} = settings;
 
+	const filterStringComplete = ( string ) => filterString( string.replace( '\n', '' ) );
+
 	if (
 		element.nodeName === 'BR' &&
 		! removeNodeMatch( element ) &&
@@ -97,15 +111,15 @@ function createRecord( element, range, settings = {} ) {
 		if ( node.nodeType === TEXT_NODE ) {
 			if ( range ) {
 				if ( node === range.startContainer ) {
-					accumulator.selection.start = accumulator.value.text.length + filterString( node.nodeValue.slice( 0, range.startOffset ) ).length;
+					accumulator.selection.start = accumulator.value.text.length + filterStringComplete( node.nodeValue.slice( 0, range.startOffset ) ).length;
 				}
 
 				if ( node === range.endContainer ) {
-					accumulator.selection.end = accumulator.value.text.length + filterString( node.nodeValue.slice( 0, range.endOffset ) ).length;
+					accumulator.selection.end = accumulator.value.text.length + filterStringComplete( node.nodeValue.slice( 0, range.endOffset ) ).length;
 				}
 			}
 
-			const text = filterString( node.nodeValue, accumulator.selection );
+			const text = filterStringComplete( node.nodeValue, accumulator.selection );
 			accumulator.value.text += text;
 			formats.push( ...Array( text.length ) );
 		} else if ( node.nodeType === ELEMENT_NODE ) {

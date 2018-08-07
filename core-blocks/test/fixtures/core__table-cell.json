@@ -1,0 +1,23 @@
+[
+    {
+        "clientId": "_clientId_0",
+        "name": "core/table-cell",
+        "isValid": true,
+        "attributes": {
+            "content": {
+                "formats": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "text": "Version"
+            }
+        },
+        "innerBlocks": [],
+        "originalContent": "<td>Version</td>"
+    }
+]

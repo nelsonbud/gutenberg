@@ -1,23 +1,16 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
 import classnames from 'classnames';
 
 /**
  * WordPress dependencies
  */
 import { Fragment } from '@wordpress/element';
-import { getPhrasingContentSchema } from '@wordpress/blocks';
-import {
-	RichText,
-	InspectorControls,
-} from '@wordpress/editor';
-
-import {
-	PanelBody,
-	ToggleControl,
-} from '@wordpress/components';
+import { getPhrasingContentSchema, createBlock, getBlockAttributes } from '@wordpress/blocks';
+import { InspectorControls, InnerBlocks } from '@wordpress/editor';
+import { PanelBody, ToggleControl } from '@wordpress/components';
+import { __ } from '@wordpress/i18n';
 
 /**
  * Internal dependencies
@@ -25,7 +18,8 @@ import {
 import './editor.scss';
 import './style.scss';
 import './theme.scss';
-import TableBlock from './table-block';
+import { name as rowName } from './row';
+import { name as cellName, settings as cellSettings } from './cell';
 
 const tableContentSchema = {
 	tr: {
@@ -65,26 +59,6 @@ export const settings = {
 	category: 'formatting',
 
 	attributes: {
-		rows: {
-			type: 'array',
-			default: [],
-			source: 'query',
-			selector: 'tr',
-			query: {
-				cells: {
-					type: 'array',
-					default: [],
-					source: 'query',
-					selector: 'th,tr',
-					query: {
-						cell: {
-							type: 'object',
-							source: 'rich-text',
-						},
-					},
-				},
-			},
-		},
 		hasFixedLayout: {
 			type: 'boolean',
 			default: false,
@@ -101,22 +75,35 @@ export const settings = {
 				type: 'raw',
 				selector: 'table',
 				schema: tableSchema,
+				transform( node ) {
+					const rows = Array.from( node.querySelectorAll( 'tr' ) );
+
+					const block = createBlock( name, {}, rows.map( ( row ) => {
+						const cells = Array.from( row.querySelectorAll( 'td,th' ) );
+
+						return createBlock( rowName, {}, cells.map( ( cell ) => {
+							const blockAttributes = getBlockAttributes( cellSettings, cell.outerHTML );
+
+							return createBlock( cellName, blockAttributes );
+						} ) );
+					} ) );
+
+					return block;
+				},
 			},
 		],
 	},
 
-	edit( { attributes, setAttributes, isSelected, className } ) {
-		const { content, hasFixedLayout } = attributes;
+	edit( { attributes, setAttributes, className } ) {
+		const { hasFixedLayout } = attributes;
+
 		const toggleFixedLayout = () => {
 			setAttributes( { hasFixedLayout: ! hasFixedLayout } );
 		};
 
-		const classes = classnames(
-			className,
-			{
-				'has-fixed-layout': hasFixedLayout,
-			},
-		);
+		const classes = classnames( className, {
+			'has-fixed-layout': hasFixedLayout,
+		} );
 
 		return (
 			<Fragment>
@@ -129,28 +116,28 @@ export const settings = {
 						/>
 					</PanelBody>
 				</InspectorControls>
-				<TableBlock
-					onChange={ ( nextContent ) => {
-						setAttributes( { content: nextContent } );
-					} }
-					content={ content }
-					className={ classes }
-					isSelected={ isSelected }
-				/>
+				<div className={ classes }>
+					<InnerBlocks
+						template={ [ [ rowName ], [ rowName ] ] }
+						templateLock="all"
+						allowedBlocks={ [ rowName ] }
+					/>
+				</div>
 			</Fragment>
 		);
 	},
 
 	save( { attributes } ) {
-		const { content, hasFixedLayout } = attributes;
-		const classes = classnames(
-			{
-				'has-fixed-layout': hasFixedLayout,
-			},
-		);
+		const classes = classnames( {
+			'has-fixed-layout': attributes.hasFixedLayout,
+		} );
 
 		return (
-			<RichText.Content tagName="table" className={ classes } value={ content } />
+			<table className={ classes }>
+				<tbody>
+					<InnerBlocks.Content />
+				</tbody>
+			</table>
 		);
 	},
 };

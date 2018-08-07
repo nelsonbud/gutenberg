@@ -1,0 +1,12 @@
+[
+    {
+        "blockName": "core/table-cell",
+        "attrs": null,
+        "innerBlocks": [],
+        "innerHTML": "\n<td>Version</td>\n"
+    },
+    {
+        "attrs": {},
+        "innerHTML": "\n"
+    }
+]

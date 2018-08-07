@@ -1,0 +1,72 @@
+[
+    {
+        "clientId": "_clientId_0",
+        "name": "core/table-row",
+        "isValid": true,
+        "attributes": {},
+        "innerBlocks": [
+            {
+                "clientId": "_clientId_0",
+                "name": "core/table-cell",
+                "isValid": true,
+                "attributes": {
+                    "content": {
+                        "formats": [
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "text": "Version"
+                    }
+                },
+                "innerBlocks": [],
+                "originalContent": "<td>Version</td>"
+            },
+            {
+                "clientId": "_clientId_1",
+                "name": "core/table-cell",
+                "isValid": true,
+                "attributes": {
+                    "content": {
+                        "formats": [
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "text": "Musician"
+                    }
+                },
+                "innerBlocks": [],
+                "originalContent": "<td>Musician</td>"
+            },
+            {
+                "clientId": "_clientId_2",
+                "name": "core/table-cell",
+                "isValid": true,
+                "attributes": {
+                    "content": {
+                        "formats": [
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "text": "Date"
+                    }
+                },
+                "innerBlocks": [],
+                "originalContent": "<td>Date</td>"
+            }
+        ],
+        "originalContent": "<tr>\n\t\n\n\t\n\n\t\n</tr>"
+    }
+]

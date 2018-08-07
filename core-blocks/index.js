@@ -41,6 +41,8 @@ import * as shortcode from './shortcode';
 import * as spacer from './spacer';
 import * as subhead from './subhead';
 import * as table from './table';
+import * as tableRow from './table/row';
+import * as tableCell from './table/cell';
 import * as textColumns from './text-columns';
 import * as verse from './verse';
 import * as video from './video';
@@ -83,6 +85,8 @@ export const registerCoreBlocks = () => {
 		spacer,
 		subhead,
 		table,
+		tableRow,
+		tableCell,
 		textColumns,
 		verse,
 		video,

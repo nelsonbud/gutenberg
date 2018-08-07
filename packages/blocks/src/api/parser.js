@@ -133,7 +133,15 @@ export function matcherFromSource( sourceConfig ) {
  * @return {*} Attribute value.
  */
 export function parseWithAttributeSchema( innerHTML, attributeSchema ) {
-	return hpqParse( innerHTML, matcherFromSource( attributeSchema ) );
+	if ( attributeSchema.source === 'html' && ! attributeSchema.selector ) {
+		return innerHTML;
+	}
+
+	const template = document.createElement( 'template' );
+
+	template.innerHTML = innerHTML;
+
+	return hpqParse( template.content, matcherFromSource( attributeSchema ) );
 }
 
 /**
