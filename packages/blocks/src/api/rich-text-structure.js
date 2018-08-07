@@ -261,6 +261,15 @@ export function apply( value, current, multiline ) {
 		startContainer.insertData( 0, '\uFEFF' );
 		range.setStart( startContainer, 1 );
 		range.setEnd( endContainer, 1 );
+	} else if (
+		collapsed &&
+		startOffset === 0 &&
+		startContainer === TEXT_NODE &&
+		startContainer.nodeValue.length === 0
+	) {
+		startContainer.insertData( 0, '\uFEFF' );
+		range.setStart( startContainer, 1 );
+		range.setEnd( endContainer, 1 );
 	} else {
 		range.setStart( startContainer, startOffset );
 		range.setEnd( endContainer, endOffset );
@@ -416,6 +425,22 @@ export function toDOM( { value, selection = {} }, multiline, _tag ) {
 
 			return element.appendChild( newNode );
 		}, body );
+	}
+
+	if ( start === last || end === last ) {
+		let pointer = body.lastChild;
+
+		if ( pointer.nodeType !== TEXT_NODE ) {
+			pointer = pointer.parentNode.appendChild( doc.createTextNode( '' ) );
+		}
+
+		if ( start === last ) {
+			startPath = createPathToNode( pointer, body, [ 0 ] );
+		}
+
+		if ( end === last ) {
+			endPath = createPathToNode( pointer, body, [ 0 ] );
+		}
 	}
 
 	return {
