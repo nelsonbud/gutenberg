@@ -2,7 +2,7 @@
  * External dependencies
  */
 import classnames from 'classnames';
-import { castArray, first, last, every } from 'lodash';
+import { castArray, first, last, every, flow } from 'lodash';
 
 /**
  * WordPress dependencies
@@ -26,6 +26,11 @@ import BlockUnknownConvertButton from './block-unknown-convert-button';
 import _BlockSettingsMenuFirstItem from './block-settings-menu-first-item';
 import _BlockSettingsMenuPluginsExtension from './block-settings-menu-plugins-extension';
 import withDeprecatedUniqueId from '../with-deprecated-unique-id';
+
+const preventDefault = ( event ) => {
+	event.preventDefault();
+	return event;
+};
 
 const shortcuts = {
 	duplicate: {
@@ -81,8 +86,12 @@ export class BlockSettingsMenu extends Component {
 				<KeyboardShortcuts
 					bindGlobal
 					shortcuts={ {
-						[ shortcuts.duplicate.raw ]: onDuplicate,
-						[ shortcuts.remove.raw ]: onRemove,
+						// Prevents bookmark all Tabs shortcut in Chrome when devtools are closed.
+						// Prevents reposition Chrome devtools pane shortcut when devtools are open.
+						[ shortcuts.duplicate.raw ]: flow( preventDefault, onDuplicate ),
+						// This shortcut has no known clashes, but use preventDefault to prevent any
+						// obscure shortcuts from triggering.
+						[ shortcuts.remove.raw ]: flow( preventDefault, onRemove ),
 					} }
 				/>
 				<Dropdown
