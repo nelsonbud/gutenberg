@@ -37,10 +37,6 @@ const shortcuts = {
 		raw: rawShortcut.primaryShift( 'd' ),
 		display: displayShortcut.primaryShift( 'd' ),
 	},
-	remove: {
-		raw: rawShortcut.primaryAlt( 'backspace' ),
-		display: displayShortcut.primaryAlt( 'bksp' ),
-	},
 };
 
 export class BlockSettingsMenu extends Component {
@@ -89,9 +85,6 @@ export class BlockSettingsMenu extends Component {
 						// Prevents bookmark all Tabs shortcut in Chrome when devtools are closed.
 						// Prevents reposition Chrome devtools pane shortcut when devtools are open.
 						[ shortcuts.duplicate.raw ]: flow( preventDefault, onDuplicate ),
-						// This shortcut has no known clashes, but use preventDefault to prevent any
-						// obscure shortcuts from triggering.
-						[ shortcuts.remove.raw ]: flow( preventDefault, onRemove ),
 					} }
 				/>
 				<Dropdown
@@ -171,7 +164,6 @@ export class BlockSettingsMenu extends Component {
 									className="editor-block-settings-menu__control"
 									onClick={ onRemove }
 									icon="trash"
-									shortcut={ shortcuts.remove.display }
 								>
 									{ __( 'Remove Block' ) }
 								</MenuItem>
